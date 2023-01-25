@@ -2,6 +2,7 @@ body{
   height: 100vh;
   margin: 0;
   overflow: hidden;
+  font-family: "Lato", sans-serif;
 }
 
 .page{
@@ -67,17 +68,13 @@ body{
   animation-delay: 0.6s;
 } */
 
-.container{
-  height: 100%;
-}
-
-.navbar-content{
-  margin: 10px;
+.navbar{
+  padding: 50px;
   display: inline-flex;
   width: 55%;
 }
 
-ul{
+.navbar-list{
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -86,38 +83,56 @@ ul{
   margin: 0;
 }
 
-li{
+.navbar-opt{
   list-style: none;
   width: auto;
 }
 
-a{
+.navbar-opt a{
   text-decoration: none;
   color: black;
 }
 
-img{
+.img-main{
   width: 80px;
   height: 80px;
 }
 
 .main-content{
-  width: 55%;
+  width: 80%;
   height: 45%;
-  margin: 20px;
+  margin: 0;
   display: inline-block;
 }
 
-p{
-  width: 50%;
-  display: inline-block;
+.p-main{
+  width: 40%;
+  padding: 20px 70px;
+  margin: 0;
+}
+
+.title-container{
+  font-size: 20px;
+  padding: 0 80px;
+  margin-top: 120px;
+  width: 35%;
+}
+
+.title-main{
+  font-size: 30px;
+  margin: 0;
+}
+
+.img-title{
+  width: 200px;
+  display: block;
 }
 
 .pokemon{
   position: absolute;
   display: flex;
   width: 55%;
-  height: 40%;
+  height: 30%;
   background: lightsalmon;
   bottom: 0;
   border-radius: 0 50px 0 0;
@@ -125,9 +140,14 @@ p{
   align-items: flex-end;
 }
 
+.img-pokemon{
+  width: 160px;
+  height: 160px;
+}
+
 .side-content{
   position: absolute;
-  width: 35%;
+  width: 25%;
   display: inline-block;
   top: 0;
   right: 0;
@@ -136,15 +156,38 @@ p{
   align-items: center;
 }
 
-.side-content img{
+.img-side{
   position: absolute;
-  top: 50%;
-  right: 92%;
+  top: 20%;
+  right: 5%;
+  width: 500px;
 }
 
 .side-content p{
+  font-size: 60px;
   position: absolute;
-  top: 40%;
-  right: 90%;
+  top: 45%;
+  right: 450px;
   transform: rotate(270deg);
+}
+
+.title-sec{
+  display: none;
+}
+
+.pokemon-container{
+  background-color: lightblue;
+  border-radius: 50px 50px 0 0;
+}
+
+.bulbasaur-bckg{
+  background: lightgreen;
+}
+
+.charmander-bckg{
+  background-color: crimson;
+}
+
+.squirtle-bckg{
+  background-color: lightblue;
 }

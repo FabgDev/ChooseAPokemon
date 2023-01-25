@@ -7,44 +7,44 @@
     <link rel="icon" href="img/Pokeball.png">
     <link rel="stylesheet" href="main.css" />
     <title>Choose Your Pokémon</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="page">
-      <section class="container">
         <nav class="navbar">
-          <div class="navbar-content">
-            <img src="img/Pokeball.png" alt="" />
-            <ul>
-              <li><a href="#">EXCLUSIVE</a></li>
-              <li><a href="#">NEW</a></li>
-              <li><a href="#">POKÉAPI</a></li>
-              <li><a href="#">FIND A CENTER</a></li>
+            <img class='img-main' src="img/Pokeball.png" alt="" />
+            <ul class='navbar-list'>
+              <li class='navbar-opt'><a href="#">EXCLUSIVE</a></li>
+              <li class='navbar-opt'><a href="#">NEW</a></li>
+              <li class='navbar-opt'><a href="#">POKÉAPI</a></li>
+              <li class='navbar-opt'><a href="#">FIND A CENTER</a></li>
             </ul>
-          </div>
         </nav>
         <section class="main-content">
-          <h1><span>Choose your</span> Pokémon</h1>
-          <p>
+          <div class='title-container'> 
+            <h1 class='title-main'>Choose your <span class='title-sec'>Pokémon</span></h1>
+            <img class='img-title' src="img/International_Pokémon_logo.svg.png" alt="">
+          </div>
+          <p class='p-main'>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
             alias molestiae illum pariatur itaque numquam, ab voluptates modi
             nisi cumque magni ad possimus voluptatibus repudiandae dicta
             laudantium natus fugiat laboriosam?
           </p>
-        </section>
         <section class="side-content">
-          <p>Lorem</p>
-          <img src="img/Pokeball.png" alt="" />
-          <div></div>
+          <p class='p-side'>Pikachu</p>
+          <img class='img-side' src="img/580b57fcd9996e24bc43c325.png" alt="" />
         </section>
         <section class='pokemon'>
-          <div>
-            <img src="img/Pokeball.png" alt="" />
+          <div class='pokemon-container bulbasaur-bckg'>
+            <img class='img-pokemon' src="img/0001Bulbasaur.png" alt="" />
           </div>
-          <div>
-            <img src="img/Pokeball.png" alt="" />
+          <div class='pokemon-container charmander-bckg'>
+            <img class='img-pokemon' src="img/89eb96f564dd8335a07467bda39e344c.png" alt="" />
           </div>
-          <div>
-            <img src="img/Pokeball.png" alt="" />
+          <div class='pokemon-container squirtle-bckg'>
+            <img class='img-pokemon' src="img/squirtle-logo-4EA3D6011D-seeklogo.com.png" alt="" />
           </div>
         </section>
       </section>
@@ -54,7 +54,6 @@
         <div class='loader-center'></div>
         <div class='loader-last'></div>
       </section>
-      <section></section>
     </div>
   </body>
 </html>
