@@ -179,10 +179,20 @@ body {
 
 .img-pokemon {
   width: 12%;
-  height: 15%;
+  height: 20%;
   position: absolute;
-  bottom: 10%;
+  bottom: 8%;
   filter: drop-shadow(var(--shadow-main));
+  animation: var(--anim-time-main) pokemon-anim var(--anim-delay-main);
+}
+
+@keyframes pokemon-anim {
+  0% {
+    transform: translateY(800px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .bulbasaur-bckg {
@@ -198,7 +208,6 @@ body {
 }
 
 .loader {
-  display: none;
   width: 100%;
   height: 100%;
   display: flex;
