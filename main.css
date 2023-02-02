@@ -70,7 +70,7 @@ body {
   justify-content: space-around;
 }
 
-.img-main {
+.nav-img {
   width: 30%;
   max-width: 200px;
 
@@ -145,19 +145,21 @@ body {
       var(--color-main) 100%);
 }
 
-.img-side {
+.side-img {
   width: 100%;
 
-  grid-area: image;  
-  
+  grid-area: image;
+
   filter: drop-shadow(var(--shadow-main));
-  
+
+  transition: all 500ms ease-in-out;
   animation: var(--anim-time-main) imgside-anim var(--anim-delay-main) ease-in-out;
 }
 
-.img-side:hover{
-transform: scale(1.2);
-translate: 0 -40px;
+.side-img:hover {
+  transform: scale(1.2);
+  translate: 0 -40px;
+  cursor: pointer;
 }
 
 @keyframes imgside-anim {
@@ -214,41 +216,45 @@ translate: 0 -40px;
   border-radius: 20% 20% 0 0;
 }
 
-.pokemon-bckg:hover img{
+.pokemon-bckg:hover img {
   transform: scale(1.2);
   translate: 0 -40px;
+  cursor: pointer;
+
+  transition: all 500ms ease-in-out;
 }
 
-.img-pokemon {
+.pokemon-img {
   width: 12%;
 
   position: absolute;
   bottom: 5%;
 
   filter: drop-shadow(var(--shadow-main));
+  transition: all 500ms ease-in-out;
 }
 
-.squirtle-bckg {
+.bckg-water {
   background-color: var(--color-water);
 }
 
-.bulbasaur-bckg {
+.bckg-grass {
   background: var(--color-grass);
 }
 
-.charmander-bckg {
+.bckg-fire {
   background-color: var(--color-fire);
 }
 
-.squirtle-bckg img{
+.bckg-water img {
   animation: var(--anim-time-main) pokemon-anim var(--anim-delay-main);
 }
 
-.bulbasaur-bckg img{
-animation: calc(var(--anim-time-main) + var(--anim-diff)) pokemon-anim var(--anim-delay-main);
+.bckg-grass img {
+  animation: calc(var(--anim-time-main) + var(--anim-diff)) pokemon-anim var(--anim-delay-main);
 }
 
-.charmander-bckg img{
+.bckg-fire img {
   animation: calc(var(--anim-time-main) + var(--anim-diff) * 2) pokemon-anim var(--anim-delay-main);
 }
 
@@ -282,13 +288,16 @@ animation: calc(var(--anim-time-main) + var(--anim-diff)) pokemon-anim var(--ani
     opacity: 1;
     visibility: visible;
   }
+
   90% {
     opacity: 1;
     visibility: hidden;
   }
-  99%{
+
+  99% {
     height: 100%;
   }
+
   100% {
     opacity: 0;
     height: 0;
@@ -300,7 +309,7 @@ animation: calc(var(--anim-time-main) + var(--anim-diff)) pokemon-anim var(--ani
   height: 80px;
 
   margin: 8px;
-  
+
   filter: drop-shadow(var(--shadow-main));
 
   animation: scaling 2s ease-in-out;
@@ -328,4 +337,42 @@ animation: calc(var(--anim-time-main) + var(--anim-diff)) pokemon-anim var(--ani
 
 .loader .loader-last img {
   animation-delay: 0.4s;
+}
+
+.modal {
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(5px);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+
+.hidden{
+  display: none;
+}
+
+.img-container{
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  background: var(--color-sec);
+  left: 25%;
+  border-radius: 20%;
+}
+
+.close, button{
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  right: 30px;
+  top: 10px;
+  visibility: hidden;
+}
+
+.close{
+  width: 100%;
+  height: 100%;
+  visibility: visible;
 }
