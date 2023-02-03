@@ -201,7 +201,7 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 20%);
   grid-template-rows: 50% 50%;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: flex-end;
 
   background: var(--color-main);
@@ -367,96 +367,98 @@ a {
 
   position: absolute;
 
-  display: flex;
-  place-items: center;
+  display: grid;
+  grid-template-columns: 7% 86% 7%;
+  grid-template-rows: 80% 20%;
+  grid-template-areas:
+    "empty cards close"
+    "empty button other";
+  align-items: flex-start;
+  justify-items: center;
 
   background: white;
 }
 
-.modal__content__button {
-  width: 7%;
-  height: 7%;
-  margin: 1%;
+.modal__content__button-sec {
+  grid-area: close;
+  width: 100%;
+  height: auto;
+  margin: 15%;
   visibility: hidden;
+
+  align-self: flex-start;
+  justify-self: end;
 }
 
-.modal__content__button--close {
+.modal__content__button-sec--close {
   width: 100%;
   height: 100%;
   visibility: visible;
 }
 
-.modal__content__button:hover {
+.modal__content__button-sec:hover {
   cursor: pointer;
 }
 
-.modal__content__img-container {
-  width: 90%;
-  height: 90%;
-  align-self: flex-end;
-  position: absolute;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.active {
-  width: 50%;
-  height: 50%;
-}
-
-.inactive {
-  width: 20%;
-  height: 20%;
-}
-
 .modal__content__slider {
-  width: 300px;
-  height: 200px;
-  transform-style: preserve-3d;
-
-}
-
-.card-container {
-  position: relative;
+  grid-area: cards;
   width: 100%;
   height: 100%;
 }
 
-.card {
-  width: 50%;
+.slider__radio {
+  display: none;
+}
+
+.card-container {
+  width: 100%;
   height: 100%;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  transition: transform 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  margin: 1%;
   cursor: pointer;
-  display: grid;
-  place-items: center;
   background: var(--color-main);
+  border: 2px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#radio-1:checked ~ .cards #card-1, 
-#radio-2:checked ~ .cards #card-2,
-#radio-3:checked ~ .cards #card-3{
-  transform: translateX(0) scale(1);
-  opacity: 1;
+.card img{
+  width: 100%;
+  height: auto;
+}
+
+.card.card--active {
   z-index: 1;
+  width: 30%;
+  height: 60%;
 }
 
-#radio-1:checked ~ .cards #card-2, 
-#radio-2:checked ~ .cards #card-3,
-#radio-3:checked ~ .cards #card-1{
-  transform: translateX(40%) scale(0.8);
-  opacity: 0.5;
+.card.card--inactive {
+  position: absolute;
   z-index: 0;
+  width: 25%;
+  height: 35%;
+  opacity: 0.5;
 }
 
-#radio-1:checked ~ .cards #card-3, 
-#radio-2:checked ~ .cards #card-1,
-#radio-3:checked ~ .cards #card-2{
-  transform: translateX(-40%) scale(0.8);
-  opacity: 0.5;
-  z-index:01;
+.card-1{
+  right: 45%;
+}
+
+.card-3{
+  left: 45%;
+}
+
+.modal__content__button-primary {
+  grid-area: button;
+  width: 55%;
+  height: 70%;
+  background-color: var(--color-sec);
+  color: white;
 }

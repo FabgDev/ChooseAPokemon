@@ -1,5 +1,5 @@
 const clickImg = document.getElementsByClassName("click-img");
-const close = document.getElementsByClassName("modal__content__button");
+const close = document.getElementsByClassName("modal__content__button-sec");
 const bckg = document.getElementsByClassName("modal__bckg");
 
 for (let i = 0; i < clickImg.length; i++) {
