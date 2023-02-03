@@ -15,19 +15,19 @@
 <body>
   <section class="container">
     <nav class="navbar">
-      <img class="nav-img" src="img/pokemon-logo.png" alt="" />
-      <ul class="navbar-list">
-        <li class="navbar-opt"><a href="#">PROJECTS</a></li>
-        <li class="navbar-opt"><a href="#">NEW</a></li>
-        <li class="navbar-opt"><a href="#">POKÉAPI</a></li>
-        <li class="navbar-opt"><a href="#">FIND A CENTER</a></li>
+      <img class="navbar__img" src="img/pokemon-logo.png" alt="" />
+      <ul class="navbar__list">
+        <li class="navbar__list__opt"><a href="#">PROJECTS</a></li>
+        <li class="navbar__list__opt"><a href="#">NEW</a></li>
+        <li class="navbar__list__opt"><a href="#">POKÉAPI</a></li>
+        <li class="navbar__list__opt"><a href="#">FIND A CENTER</a></li>
       </ul>
     </nav>
     <section class='main-content'>
-      <h1 class="title-main">
-        Choose your<br /><span class="title-sec">First Pokémon</span>
+      <h1 class="main-content__title-main">
+        Choose your<br /><span class="main-content__title-sec">First Pokémon</span>
       </h1>
-      <p class="p-main">
+      <p class="main-content__text">
         Welcome to the world of Pokémon! Choose your first Pokémon to start
         your journey. <br />
         <br />
@@ -39,28 +39,36 @@
       </p>
     </section>
     <section class="side-content">
-      <p class="p-side">Pikachu</p>
-      <img class="click-img side-img" src="img/pikachu.png" alt="" />
+      <p class="side-content__text">Pikachu</p>
+      <img class="side-content__img click-img" src="img/pikachu.png" alt="" />
     </section>
     <section class="pokemon-container">
-      <div class="pokemon-bckg bckg-water">
-        <img class="click-img pokemon-img" src="img/squirtle.png" alt="" />
+      <div class="pokemon-container__bckg bckg-water">
+        <img class="pokemon-container__bckg__img click-img" src="img/squirtle.png" alt="" />
       </div>
-      <div class="pokemon-bckg bckg-grass">
-        <img class="click-img pokemon-img" src="img/bulbasaur.png" alt="" />
+      <div class="pokemon-container__bckg bckg-grass">
+        <img class="pokemon-container__bckg__img click-img" src="img/bulbasaur.png" alt="" />
       </div>
-      <div class="pokemon-bckg bckg-fire">
-        <img class="click-img pokemon-img" src="img/charmander.png" alt="" />
+      <div class="pokemon-container__bckg bckg-fire">
+        <img class="pokemon-container__bckg__img click-img" src="img/charmander.png" alt="" />
       </div>
     </section>
     <section class="loader">
-      <div class="loader-first"><img src="img/Pokeball.png"></div>
-      <div class="loader-center"><img src="img/Pokeball.png"></div>
-      <div class="loader-last"><img src="img/Pokeball.png"></div>
+      <img class='loader__img loader__img--main' src="img/Pokeball.png">
+      <img class='loader__img loader__img--sec' src="img/Pokeball.png">
+      <img class='loader__img loader__img--third' src="img/Pokeball.png">
   </section>
   <section class='modal hidden'>
-    <div class='img-container'>
-      <button><img class='close' src="img/preview.png" alt=""></button>
+    <div class="modal__bckg"></div>
+    <div class='modal__content'>
+      <button class='modal__content__button'>
+        <img class='modal__content__button__close' src="img/preview.png" alt="">
+      </button>
+      <div class='modal__content__img-container'>
+        <img class='modal__content__img-container__img inactive' src="img/bulbasaur.png" alt="">
+        <img class='modal__content__img-container__img active' src="img/charmander.png" alt="">
+        <img class='modal__content__img-container__img inactive' src="img/squirtle.png" alt="">
+      </div>
     </div>
   </section>
   <script src='index.js'></script>
