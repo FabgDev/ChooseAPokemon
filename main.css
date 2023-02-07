@@ -48,7 +48,8 @@ body {
   align-items: center;
   justify-content: space-between;
 
-  animation: var(--anim-time-main) navbar-anim var(--anim-delay-main) ease-in-out;
+  animation: var(--anim-time-main) navbar-anim var(--anim-delay-main)
+    ease-in-out;
 }
 
 @keyframes navbar-anim {
@@ -61,12 +62,12 @@ body {
   }
 }
 
-.navbar a{
+.navbar a {
   width: 30%;
   max-width: 200px;
 }
 
-.navbar a:hover{
+.navbar a:hover {
   cursor: pointer;
 }
 
@@ -100,7 +101,8 @@ a {
   margin: 5% 10%;
   grid-area: main;
 
-  animation: var(--anim-time-main) maincont-anim var(--anim-delay-main) ease-in-out;
+  animation: var(--anim-time-main) maincont-anim var(--anim-delay-main)
+    ease-in-out;
 }
 
 @keyframes maincont-anim {
@@ -143,10 +145,12 @@ a {
   grid-template-areas: "text image";
   place-items: center;
 
-  background: linear-gradient(90deg,
-      transparent 50%,
-      var(--color-main) 50%,
-      var(--color-main) 100%);
+  background: linear-gradient(
+    90deg,
+    transparent 50%,
+    var(--color-main) 50%,
+    var(--color-main) 100%
+  );
 }
 
 .side-content__img {
@@ -157,7 +161,8 @@ a {
   filter: drop-shadow(var(--shadow-main));
 
   transition: all 500ms ease-in-out;
-  animation: var(--anim-time-main) imgside-anim var(--anim-delay-main) ease-in-out;
+  animation: var(--anim-time-main) imgside-anim var(--anim-delay-main)
+    ease-in-out;
 }
 
 .side-content__img:hover {
@@ -186,7 +191,6 @@ a {
 }
 
 @keyframes pside-anim {
-
   0%,
   50% {
     opacity: 0;
@@ -255,11 +259,13 @@ a {
 }
 
 .bckg-grass img {
-  animation: calc(var(--anim-time-main) + var(--anim-diff)) pokemon-anim var(--anim-delay-main);
+  animation: calc(var(--anim-time-main) + var(--anim-diff)) pokemon-anim
+    var(--anim-delay-main);
 }
 
 .bckg-fire img {
-  animation: calc(var(--anim-time-main) + var(--anim-diff) * 2) pokemon-anim var(--anim-delay-main);
+  animation: calc(var(--anim-time-main) + var(--anim-diff) * 2) pokemon-anim
+    var(--anim-delay-main);
 }
 
 @keyframes pokemon-anim {
@@ -320,7 +326,6 @@ a {
 }
 
 @keyframes scaling {
-
   0%,
   100% {
     transform: scale(1);
@@ -369,12 +374,12 @@ a {
   position: absolute;
 
   display: grid;
-  grid-template-columns: 7% 86% 7%;
-  grid-template-rows: 80% 20%;
+  grid-template-rows: 10% 60% 30%;
   grid-template-areas:
-    "empty cards close"
-    "empty button other";
-  align-items: flex-start;
+    "close"
+    "cards"
+    "button";
+  align-items: center;
   justify-items: center;
 
   background: white;
@@ -382,17 +387,14 @@ a {
 
 .modal__content__button-sec {
   grid-area: close;
-  width: 100%;
-  height: auto;
-  margin: 15%;
+  height: 100%;
+  width: auto;
   visibility: hidden;
-
-  align-self: flex-start;
   justify-self: end;
 }
 
 .modal__content__button-sec--close {
-  width: 100%;
+  width: auto;
   height: 100%;
   visibility: visible;
 }
@@ -427,31 +429,31 @@ a {
   background: var(--color-main);
   display: flex;
   align-items: center;
-  width: 30%;
-  height: 60%;
+  width: 40%;
+  height: 100%;
   transition: transform 0.3s ease;
 }
 
-#radio-1:checked~.card-container #card-1,
-#radio-2:checked~.card-container #card-2,
-#radio-3:checked~.card-container #card-3 {
+#radio-1:checked ~ .card-container #card-1,
+#radio-2:checked ~ .card-container #card-2,
+#radio-3:checked ~ .card-container #card-3 {
   transform: translateX(0) scale(1);
   opacity: 1;
   z-index: 1;
   cursor: auto;
 }
 
-#radio-1:checked~.card-container #card-2,
-#radio-2:checked~.card-container #card-3,
-#radio-3:checked~.card-container #card-1 {
+#radio-1:checked ~ .card-container #card-2,
+#radio-2:checked ~ .card-container #card-3,
+#radio-3:checked ~ .card-container #card-1 {
   transform: translateX(-40%) scale(0.8);
   opacity: 0.5;
   z-index: 0;
 }
 
-#radio-1:checked~.card-container #card-3,
-#radio-2:checked~.card-container #card-1,
-#radio-3:checked~.card-container #card-2 {
+#radio-1:checked ~ .card-container #card-3,
+#radio-2:checked ~ .card-container #card-1,
+#radio-3:checked ~ .card-container #card-2 {
   transform: translateX(40%) scale(0.8);
   opacity: 0.5;
   z-index: 0;
@@ -465,7 +467,7 @@ a {
 .modal__content__button-primary {
   grid-area: button;
   width: 50%;
-  height: 70%;
+  height: 50%;
   background-color: var(--color-sec);
   color: white;
   border: none;
